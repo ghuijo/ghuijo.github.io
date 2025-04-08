@@ -1,4 +1,4 @@
-/* 전역 스타일 초기화/설정 */
+/* Global Reset */
 * {
     margin: 0;
     padding: 0;
@@ -6,111 +6,110 @@
   }
   
   body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f8f8f8;
+    font-family: Arial, sans-serif;
+    background-color: #fafafa;
+    color: #333;
   }
   
-  /* 내비게이션 바 스타일 */
+  /* Header 및 내비게이션 바 스타일 */
+  header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
   .navbar {
-    background-color: #eaeaea;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;
   }
   
-  .navbar ul {
+  .nav-menu {
     list-style: none;
     display: flex;
-    margin: 0;
-    padding: 0;
   }
   
-  .navbar li {
-    margin: 0;
+  .nav-menu li {
+    margin-right: 20px;
   }
   
-  .navbar a {
-    display: block;
-    padding: 15px 20px;
+  .nav-link {
     text-decoration: none;
-    color: #333;
-    transition: background-color 0.3s;
+    color: #555;
+    font-size: 1rem;
+    padding: 8px 12px;
+    transition: color 0.3s, border-bottom 0.3s;
   }
   
-  /* 내비게이션 항목 hover 시 */
-  .navbar a:hover {
-    background-color: #ddd;
+  .nav-link:hover {
+    color: #000;
   }
   
-  /* 현재 활성화된 탭에 스타일 부여 */
   .nav-link.active {
-    background-color: #333;
-    color: #fff;
+    font-weight: bold;
+    color: #000;
+    border-bottom: 3px solid #000;
   }
   
-  /* 메인 컨텐츠 섹션 스타일 */
-  .content-section {
-    max-width: 1000px;
+  /* 메인 콘텐츠 영역 스타일 */
+  main {
+    max-width: 1200px;
     margin: 40px auto;
-    padding: 20px;
+    padding: 0 20px;
+  }
+  
+  .content-section {
     background-color: #fff;
-    border-radius: 8px;
+    padding: 30px;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
   }
   
-  /* 숨김 처리를 위한 클래스 */
-  .hidden {
-    display: none;
+  /* About 페이지 관련 스타일 */
+  .about .intro {
+    text-align: center;
+    margin-bottom: 30px;
   }
   
-  /* 프로필 이미지를 둥글게 표시하는 예시 */
   .profile-image {
-    width: 120px;
-    height: 120px;
+    width: 150px;
+    height: 150px;
     object-fit: cover;
     border-radius: 50%;
-    display: block;
-    margin: 0 auto 20px auto;
-  }
-  
-  /* intro 부분 스타일 */
-  .intro {
-    text-align: center;
     margin-bottom: 20px;
   }
   
-  .intro .description {
-    text-align: left;
-    margin-top: 10px;
+  .intro h1 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+  
+  .intro p {
+    font-size: 1rem;
     line-height: 1.6;
   }
   
-  /* 링크 섹션 스타일 */
-  .links-area {
-    text-align: center;
-    margin: 20px 0;
-  }
-  
-  .links-area a {
-    color: #1a0dab;
-    text-decoration: none;
-    margin: 0 5px;
-  }
-  
-  .links-area a:hover {
-    text-decoration: underline;
-  }
-  
-  /* Publications 스타일 */
+  /* Publications 영역 스타일 */
   .publications {
     margin-top: 30px;
   }
   
   .publications h2 {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
   }
   
   .publications ul {
-    list-style-type: square;
+    list-style: disc;
     padding-left: 20px;
+  }
+  
+  /* Trouble-shooting Log 및 Blog 페이지 기본 스타일 */
+  .troubleshooting, .blog {
+    font-size: 1rem;
     line-height: 1.6;
   }
   
