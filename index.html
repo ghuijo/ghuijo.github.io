@@ -2,54 +2,73 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <title>About - Your Name</title>
+  <title>Geonhui JO</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- 공통 헤더 (내비게이션 바) -->
+  <!-- 상단 헤더 -->
   <header>
-    <nav class="navbar">
-      <ul class="nav-menu">
-        <!-- 현재 페이지가 About이므로 active 클래스 부여 -->
-        <li><a href="index.html" class="nav-link active">About</a></li>
-        <li><a href="troubleshooting.html" class="nav-link">Trouble-shooting Log</a></li>
-        <li><a href="blog.html" class="nav-link">Blog</a></li>
+    <nav class="topbar">
+      <div class="brand">Geonhui JO</div>
+      <ul class="menu">
+        <li><a href="index.html" class="active">About</a></li>
+        <li><a href="troubleshooting.html">Trouble-shooting Log</a></li>
+        <li><a href="blog.html">Blog</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- 메인 콘텐츠 영역 -->
+  <!-- 메인 컨텐츠 -->
   <main>
-    <section class="content-section about">
-      <div class="intro">
-        <!-- 프로필 이미지 (같은 폴더 내에 profile.png 파일 배치) -->
+    <!-- 소개 섹션 -->
+    <section class="intro-section">
+      <div class="profile-container">
+        <!-- 프로필 이미지 -->
         <img src="profile.png" alt="Profile Image" class="profile-image">
-        <h1>Hello! I am an AI researcher working on designing deep neural networks for computer vision...</h1>
+      </div>
+      <div class="intro-text">
+        <h1>
+          Hello! I am an AI researcher working on designing deep neural networks 
+          for computer vision, especially geometry-aware image generation.
+        </h1>
         <p>
-          I am currently affiliated at B2X, an AI technology company in Seoul, Korea.
-          Before joining B2X, I completed my M.S. in Artificial Intelligence Convergence advised by 
-          Prof. Jang-Hwan Choi and B.S. in Computer Science and Engineering at Ewha Womans University 
-          (Aug. 2014 and Aug. 2022).<br><br>
-          I am highly interested in applying AI for various Vision, 3-dimensional, Human Pose, and Medical fields.
-          My research topics have been focused on Computer Vision, Facial recognition, and generative models.
-          I also have research experiences in Human Pose Recognition, Medical Imaging, and Protein-Protein Interaction Prediction.<br><br>
-          아래 네 가지 링크는 각각 다른 페이지(혹은 외부 사이트)로 연결됩니다.<br>
-          <strong><a href="https://github.com/사용자이름" target="_blank">Github</a></strong>,
-          <strong><a href="https://www.linkedin.com/in/사용자이름" target="_blank">LinkedIn</a></strong>,
-          <strong><a href="https://example.com/prof-choi" target="_blank">Prof. Jang-Hwan Choi</a></strong>,
-          <strong><a href="https://example.com/내_CV.pdf" target="_blank">CV</a></strong>
+          I am currently affiliated with B2X, an AI technology company in Seoul, Korea. Before joining B2X, I completed my M.S. in Artificial Intelligence Convergence advised by <a href="https://example.com/prof-choi" target="_blank" class="inline-link">Prof. Jang-Hwan Choi</a> and B.S. in Computer Science at Ewha Womans University.
+        </p>
+        <p>
+          I have a deep passion for applying AI to various domains including Vision, 3D, Human, and Biomedical research. My research has been focused on Computer Vision, Face Inference, and generative AI, along with experiences in Human Pose Recognition, Medical Imaging, and Protein-Protein Interaction Prediction.
+        </p>
+        <!-- 이메일은 단순 텍스트로 표현 -->
+        <p class="email-text">
+          E-mail: [email protected]
+        </p>
+        <!-- GitHub, LinkedIn 버튼 -->
+        <div class="social-buttons">
+          <a href="https://github.com/사용자이름" target="_blank" class="btn-link">GitHub</a>
+          <a href="https://www.linkedin.com/in/사용자이름" target="_blank" class="btn-link">LinkedIn</a>
+        </div>
+        <!-- CV 인라인 링크 -->
+        <p>
+          For more details, please check out my <a href="내_CV.pdf" target="_blank" class="inline-link">CV</a>.
         </p>
       </div>
+    </section>
 
-      <div class="publications">
-        <h2>Publications</h2>
-        <ul>
-          <li>G. Kim, S.B. Mar, S.Y. Noh, and J.H. Choi: "SciAI-MLA: Language model and automated data evaluation in AI research"</li>
-          <li>G. Kim, B.L. Han: "New DNN approach for medical imaging"</li>
-        </ul>
-      </div>
+    <!-- 출판 목록 -->
+    <section class="publications">
+      <h2>Publications</h2>
+      <ul>
+        <li>
+          G. Kim, S.B. Mar, S.Y. Noh, and J.H. Choi: 
+          "SepH-MLA: Language model approach in translational bio research" 
+          <a href="#" class="coauthor-link">Add co-first author</a>
+        </li>
+        <li>
+          G. Kim, S.B. Mar, S.Y. Noh, J.Y. Kim, and J.H. Choi: 
+          "Deep multi-image denoising framework for x-ray fluoroscopic images" in SPIE Medical Imaging: Physics of Medical Imaging
+          <a href="#" class="coauthor-link">Add co-first author</a>
+        </li>
+      </ul>
     </section>
   </main>
-  <script src="script.js"></script>
 </body>
 </html>

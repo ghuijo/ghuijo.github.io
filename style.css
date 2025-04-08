@@ -1,115 +1,223 @@
-/* Global Reset */
+/* 전역 리셋 */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
   
+  /* 기본 스타일 */
   body {
-    font-family: Arial, sans-serif;
-    background-color: #fafafa;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 16px;
     color: #333;
+    background-color: #fff;
+    line-height: 1.6;
   }
   
-  /* Header 및 내비게이션 바 스타일 */
+  /* 헤더 및 네비게이션 바 */
   header {
-    background-color: #ffffff;
-    border-bottom: 1px solid #e0e0e0;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-    position: sticky;
-    top: 0;
-    z-index: 100;
+    width: 100%;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
   }
   
-  .navbar {
+  .topbar {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 10px 20px;
-  }
-  
-  .nav-menu {
-    list-style: none;
+    padding: 20px;
     display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
   
-  .nav-menu li {
-    margin-right: 20px;
-  }
-  
-  .nav-link {
-    text-decoration: none;
-    color: #555;
-    font-size: 1rem;
-    padding: 8px 12px;
-    transition: color 0.3s, border-bottom 0.3s;
-  }
-  
-  .nav-link:hover {
-    color: #000;
-  }
-  
-  .nav-link.active {
+  .brand {
+    font-size: 1.25rem;
     font-weight: bold;
     color: #000;
-    border-bottom: 3px solid #000;
   }
   
-  /* 메인 콘텐츠 영역 스타일 */
+  .menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .menu li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+    padding: 5px;
+    transition: color 0.2s;
+  }
+  
+  .menu li a:hover {
+    color: #007bff;
+  }
+  
+  .menu li a.active {
+    font-weight: bold;
+    border-bottom: 2px solid #007bff;
+  }
+  
+  /* 메인 콘텐츠 */
   main {
     max-width: 1200px;
     margin: 40px auto;
     padding: 0 20px;
   }
   
-  .content-section {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 6px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  /* 소개 섹션 */
+  .intro-section {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    margin-bottom: 40px;
   }
   
-  /* About 페이지 관련 스타일 */
-  .about .intro {
-    text-align: center;
-    margin-bottom: 30px;
+  .profile-container {
+    flex-shrink: 0;
   }
   
   .profile-image {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #eaeaea;
+  }
+  
+  .intro-text {
+    max-width: 700px;
+  }
+  
+  .intro-text h1 {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    font-weight: normal;
+    color: #222;
+    line-height: 1.4;
+  }
+  
+  .intro-text p {
+    margin-bottom: 15px;
+    color: #444;
+    font-size: 1rem;
+  }
+  
+  /* 이메일 텍스트 (링크가 없는 단순 텍스트) */
+  .email-text {
+    margin-bottom: 15px;
+    font-style: italic;
+    color: #555;
+  }
+  
+  /* 소셜 버튼 영역: GitHub, LinkedIn 버튼 */
+  .social-buttons {
+    display: flex;
+    gap: 10px;
     margin-bottom: 20px;
   }
   
-  .intro h1 {
-    font-size: 2rem;
-    margin-bottom: 15px;
+  .btn-link {
+    text-decoration: none;
+    display: inline-block;
+    padding: 7px 12px;
+    color: #007bff;
+    background-color: #f8f9fa;
+    border: 1px solid #007bff;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    transition: background-color 0.2s, color 0.2s;
   }
   
-  .intro p {
-    font-size: 1rem;
-    line-height: 1.6;
+  .btn-link:hover {
+    background-color: #007bff;
+    color: #fff;
   }
   
-  /* Publications 영역 스타일 */
+  /* 인라인 링크 (CV, Prof. 링크 등) */
+  .inline-link {
+    text-decoration: underline;
+    color: #007bff;
+    transition: color 0.2s;
+  }
+  
+  .inline-link:hover {
+    color: #0056b3;
+  }
+  
+  /* Publications 섹션 */
   .publications {
-    margin-top: 30px;
+    margin-bottom: 50px;
   }
   
   .publications h2 {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #000;
   }
   
   .publications ul {
-    list-style: disc;
-    padding-left: 20px;
+    list-style: none;
+    padding-left: 0;
   }
   
-  /* Trouble-shooting Log 및 Blog 페이지 기본 스타일 */
-  .troubleshooting, .blog {
-    font-size: 1rem;
-    line-height: 1.6;
+  .publications li {
+    margin-bottom: 15px;
+    position: relative;
+    padding-right: 100px; /* 'coauthor-link' 배치 공간 확보 */
+    font-size: 0.95rem;
+    color: #444;
+    line-height: 1.4;
+  }
+  
+  .publications li::before {
+    content: "•";
+    margin-right: 5px;
+    color: #007bff;
+    position: absolute;
+    left: -15px;
+  }
+  
+  .coauthor-link {
+    text-decoration: none;
+    font-size: 0.8rem;
+    color: #007bff;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translateY(-2px);
+    transition: color 0.2s ease;
+  }
+  
+  .coauthor-link:hover {
+    color: #0056b3;
+  }
+  
+  /* 반응형 디자인 */
+  @media (max-width: 768px) {
+    .topbar {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+  
+    .menu {
+      gap: 10px;
+    }
+  
+    .intro-section {
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .profile-image {
+      margin: 0 auto;
+    }
+  
+    .intro-text {
+      max-width: 100%;
+    }
   }
   
