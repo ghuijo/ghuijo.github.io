@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Geonhui JO</title>
+  <!-- 외부 CSS 파일 연결 -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- 헤더 영역 -->
+  <header>
+    <nav class="navbar">
+      <ul>
+        <!-- data-page 속성으로 어떤 섹션을 보여줄지 결정 -->
+        <li><a href="#" class="nav-link active" data-page="about">About</a></li>
+        <li><a href="#" class="nav-link" data-page="troubleshooting">Trouble-shooting Log</a></li>
+        <li><a href="#" class="nav-link" data-page="blog">Blog</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- 메인 콘텐츠 영역 -->
+  <main>
+    <!-- About 섹션 (기본적으로 표시) -->
+    <section id="about" class="content-section">
+      <div class="intro">
+        <!-- 프로필 이미지를 사용한다면, 같은 폴더에 profile.png 등을 두고 아래 src 경로를 맞춰주세요. -->
+        <img src="profile.png" alt="Profile Image" class="profile-image">
+
+        <h1>Hello! I am an AI researcher working on designing deep neural networks for computer vision...</h1>
+        <p class="description">
+          I am currently affiliated at B2X, an AI technology company in Seoul, Korea.<br>
+          Before joining B2X, I completed my M.S. in Artificial Intelligence Convergence advised by Prof. Jang-Hwan Choi and B.S. in Computer Science and Engineering at Ewha Womans University (Aug. 2014 and Aug. 2022).<br><br>
+          I am highly interested in applying AI for various Vision, 3-dimensional, Human Pose, and Medical fields. My research topics have been focused on Computer Vision, Facial recognition, and generative models. I also have research experiences in Human Pose Recognition, Medical Imaging, and Protein-Protein Interaction Prediction.<br><br>
+          <strong>Github</strong>, <strong>LinkedIn</strong>, <strong>Prof. Jang-Hwan Choi</strong>, <strong>CV</strong> 네 가지 텍스트는 다른 페이지로 이동하는 링크가 설정되어 있습니다. 아래 Publications 목록도 참고해 주세요.
+        </p>
+      </div>
+
+      <div class="links-area">
+        <!-- 링크 부분. 필요에 따라 href 속성을 수정해 주세요. -->
+        <p>
+          <a href="https://github.com/사용자이름" target="_blank">Github</a> |
+          <a href="https://www.linkedin.com/in/사용자이름" target="_blank">LinkedIn</a> |
+          <a href="https://example.com/prof-choi" target="_blank">Prof. Jang-Hwan Choi</a> |
+          <a href="https://example.com/내_CV.pdf" target="_blank">CV</a>
+        </p>
+      </div>
+
+      <div class="publications">
+        <h2>Publications</h2>
+        <ul>
+          <li>G. Kim, S.B. Mar, S.Y. Noh, and J.H. Choi: "SciAI-MLA: Language model and automated data evaluation in AI research"</li>
+          <li>G. Kim, B.L. Han: "New DNN approach for medical imaging"</li>
+          <!-- 필요한 만큼 자유롭게 추가할 수 있습니다. -->
+        </ul>
+      </div>
+    </section>
+
+    <!-- Trouble-shooting Log 섹션 (처음에는 숨겨짐) -->
+    <section id="troubleshooting" class="content-section hidden">
+      <h1>Trouble-shooting Log</h1>
+      <p>이곳에 Trouble-shooting Log와 관련된 내용을 자유롭게 작성해주세요.</p>
+    </section>
+
+    <!-- Blog 섹션 (처음에는 숨겨짐) -->
+    <section id="blog" class="content-section hidden">
+      <h1>Blog</h1>
+      <p>이곳에 Blog와 관련된 내용을 자유롭게 작성해주세요.</p>
+    </section>
+  </main>
+
+  <!-- 자바스크립트 파일 연결 -->
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+/* 전역 스타일 초기화/설정 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f8f8;
+  }
+  
+  /* 내비게이션 바 스타일 */
+  .navbar {
+    background-color: #eaeaea;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .navbar ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar li {
+    margin: 0;
+  }
+  
+  .navbar a {
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: #333;
+    transition: background-color 0.3s;
+  }
+  
+  /* 내비게이션 항목 hover 시 */
+  .navbar a:hover {
+    background-color: #ddd;
+  }
+  
+  /* 현재 활성화된 탭에 스타일 부여 */
+  .nav-link.active {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  /* 메인 컨텐츠 섹션 스타일 */
+  .content-section {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+  }
+  
+  /* 숨김 처리를 위한 클래스 */
+  .hidden {
+    display: none;
+  }
+  
+  /* 프로필 이미지를 둥글게 표시하는 예시 */
+  .profile-image {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 20px auto;
+  }
+  
+  /* intro 부분 스타일 */
+  .intro {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .intro .description {
+    text-align: left;
+    margin-top: 10px;
+    line-height: 1.6;
+  }
+  
+  /* 링크 섹션 스타일 */
+  .links-area {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .links-area a {
+    color: #1a0dab;
+    text-decoration: none;
+    margin: 0 5px;
+  }
+  
+  .links-area a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Publications 스타일 */
+  .publications {
+    margin-top: 30px;
+  }
+  
+  .publications h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .publications ul {
+    list-style-type: square;
+    padding-left: 20px;
+    line-height: 1.6;
+  }
+  
