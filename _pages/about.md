@@ -5,13 +5,14 @@ permalink: /
 subtitle: >
   <a href='https://www.linkedin.com/in/geonhui-jo/'>LinkedIn</a>.
   <a href='https://github.com/ghuijo'>Github</a>.
+  📧 geonhui_jo@ewha.ac.kr
 
 profile:
   align: left
   image: prof_pic.jpeg
   image_circular: false # crops the image to make it circular
-  more_info: >
-    <p>geonhui_jo@ewha.ac.kr</p>
+  more_info: 
+# <p>geonhui_jo@ewha.ac.kr</p>
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: false # includes social icons at the bottom of the page
