@@ -3,14 +3,14 @@ layout: post
 title: Reflections on My Early Weeks as a Visiting Researcher at FAU
 date: 2025-10-09
 description:
-tags: Visiting Reseach, Computer Vision, FAU, Germany
+tags: Visiting_reseach Computer_vision FAU Germany
 categories: research collaboration
 ---
 
 
 Hello! Since late September, I’ve been staying in Germany as a visiting researcher at **Friedrich-Alexander-Universität Erlangen-Nürnberg (FAU)**, working on a project titled *Joint Research on the Development of AI-based Image Processing Algorithms*.  
 
-It has already been about three weeks since I started my visit, and today I joined the **Colloquium** for the first time—one of the most interesting research traditions at PRL (Pattern Recognition Lab), FAU. In this post, I’d like to share some of the lab’s research culture and what has impressed me so far.
+It has already been about two weeks since I started my visit, and today I joined the **Colloquium** for the first time—one of the most interesting research traditions at PRL (Pattern Recognition Lab), FAU. In this post, I’d like to share some of the lab’s research culture and what has impressed me so far.
 
 
 ## 1. The 50th Anniversary Celebration
@@ -37,10 +37,10 @@ The conversations flow naturally in **English**, as the group is truly internati
 
 ## 3. The Colloquium
 
-Every member of the lab belongs to at least one **research group**, such as *Computer Vision*, *LAMDA*, *IPA*, or *Time Series*.  
+Every member of the lab belongs to at least one **research group**, such as *Computer Vision*, *LAMBDA*, *IPA*, or *Time Series*.  
 Each group holds a **weekly colloquium**, where members present their work or invite speakers.  
 
-Today, I attended my first sessions—one for the *Time Series* group at 2 p.m. and another for *LAMDA* at 4 p.m.  
+Today, I attended my first sessions—one for the *Time Series* group at 2 p.m. and another for *LAMBDA* at 4 p.m.  
 Typically, a Master’s student presents either an introduction or a final presentation of their thesis. After the presentation—covering background, methods, results, and future work—the entire group participates in discussion and Q&A.  
 
 For final presentations, PhD and post-doctoral researchers also provide formal evaluation and feedback. I was invited to join the evaluation myself, and, unfamiliar with the German grading system, I initially gave letter grades (A+, A, A-, etc.), which caused a small but funny misunderstanding before they kindly converted my input.  
@@ -55,6 +55,8 @@ Most lab members start their day around **8 a.m.**, focusing deeply during work 
 
 Everyone here seems highly motivated and efficient, balancing research, collaboration, and personal time remarkably well.  
 As our collaboration progresses, I hope to share more about the **joint research** itself in my next post.
+
+<br>
 
 ---
 

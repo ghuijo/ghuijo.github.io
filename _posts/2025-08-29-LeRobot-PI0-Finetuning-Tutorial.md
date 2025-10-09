@@ -3,7 +3,7 @@ layout: post
 title: LeRobot Pi0 Finetuning Tutorial
 date: 2025-08-29
 description:
-tags: Imitation_leaning, LeRobot, Pi0
+tags: Imitation_leaning LeRobot Pi0
 categories: robotics
 ---
 
@@ -23,7 +23,7 @@ This is a blog post on how to finetune LeRobot Pi0 with SO-ARM101.
 - NVIDIA Driver: 570.169 (CUDA 12.8)
 
 
-## Anaconda environment setup
+## 1. Anaconda environment setup
 - **Install Python 3.10 or higher**
 
 - **Install PyTorch**
@@ -59,7 +59,7 @@ Get access here:
 🔗 https://huggingface.co/google/paligemma-3b-pt-224
 
 
-## Pi0 finetuning
+## 2. Pi0 finetuning
 When you install LeRobot, it automatically links the command lerobot-train to train.py.
 However, you can also run it directly like this.
 Since the command is quite long, it’s convenient to save it as a train.sh file and run it using:
@@ -102,7 +102,7 @@ num_workers, batch_size, steps, eval_freq, log_freq, and save_freq.<br>
 In src/lerobot/policies/pi0/configuration_pi0.py, you can modify additional options such as train_expert_only and related settings.
 
 
-## Uploading a Trained Model to Hugging Face (Specific Checkpoint)
+## 3. Uploading a Trained Model to Hugging Face (Specific Checkpoint)
 
 To upload a specific checkpoint to Hugging Face, use the following command:
 ```bash
@@ -111,7 +111,7 @@ huggingface-cli upload {HF_USER}/{project_name} outputs/train/{project_name}/che
 There is no need to manually create the repository in advance — it will be created automatically as a public repository during upload.
 
 
-## Inference
+## 4. Inference
 
 ```bash
 lerobot-record  \
@@ -141,5 +141,7 @@ It seems that even large-scale robot foundation models struggle with the huge di
 I’m really curious to see how GROOT handles this.
 
 <br>
-<br>
+
+---
+
 Feel free to reach out if you run into any problems or have suggestions for improving this setup!
