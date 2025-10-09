@@ -23,12 +23,12 @@ announcements:
   limit: 5 # leave blank to include all the news in the `_news` folder
 
 latest_posts:
-  enabled: false
+  enabled: true
   scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Hello!I'm a researcher designing geometry-aware deep neural networks for computer vision and image generation.
+Hello! I'm a researcher designing geometry-aware deep neural networks for computer vision and image generation.
 
 I am currently affiliated with the Industry-Academic Cooperation Foundation, Ewha Womans University, in Seoul, South Korea.
 

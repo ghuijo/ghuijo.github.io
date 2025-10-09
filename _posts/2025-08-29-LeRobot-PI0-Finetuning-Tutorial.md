@@ -7,14 +7,17 @@ tags: Imitation_leaning, LeRobot, Pi0
 categories: robotics
 ---
 
-This is a blog post on how to finetune LeRobot Pi0.
+This is a blog post on how to finetune LeRobot Pi0 with SO-ARM101.
+
 
 ### References
 [LeRobot Imitation Learning Tutorial](https://huggingface.co/docs/lerobot/il_robots)
+
 [LeRobot Pi0 and Pi0-fast Blog](https://huggingface.co/blog/pi0)
 
 
 ### Experiment environment
+- Robot: SO-ARM101
 - GPU: Tesla A100 SXM4 40GB
 - OS: Ubuntu 20.04 LTS
 - NVIDIA Driver: 570.169 (CUDA 12.8)
@@ -24,6 +27,7 @@ This is a blog post on how to finetune LeRobot Pi0.
 - **Install Python 3.10 or higher**
 
 - **Install PyTorch**
+
 Currently, LeRobot only supports PyTorch versions below 2.8.
 Use the following command to install a compatible version:
 ```bash
@@ -31,27 +35,33 @@ pip install torch==2.7.1 torchvision==0.22.1 torchaudio==2.7.1 --index-url https
 ```
 
 - **Log in to WandB & Hugging Face**
+
 ```bash
 wandb login
 ```
+
 (Tip: If your school email can be verified, you can use WandB for free — even after graduation.)
+
 ```bash
 huggingface-cli login
 ```
 
 - **Install Additional Required Libraries**
+
 ```bash
 pip install transformers iniconfig pytest
 ```
 
-Depending on your environment, you might get an error asking you to install ffmpeg.
+- Depending on your environment, you might get an error asking you to install ffmpeg.
 There are several ways to install it, but the following method worked most cleanly:
+
 ```bash
 conda install -n pi0 -c conda-forge "ffmpeg>=6,<8"
 ```
-👉 This installs ffmpeg (version ≥6 and <8) into the conda environment named pi0.
+    👉 This installs ffmpeg (version ≥6 and <8) into the conda environment named pi0.
 
 - **Request Access to the Pretrained Model (PaliGemma)**
+
 Get access here:
 🔗 https://huggingface.co/google/paligemma-3b-pt-224
 
@@ -60,11 +70,13 @@ Get access here:
 When you install LeRobot, it automatically links the command lerobot-train to train.py.
 However, you can also run it directly like this.
 Since the command is quite long, it’s convenient to save it as a train.sh file and run it using:
+
 ```bash
 sh train.sh
 ```
 
 - Example training command:
+
 ```bash
 CUDA_VISIBLE_DEVICES=3 python src/lerobot/scripts/train.py \
 --policy.path=lerobot/pi0 \
@@ -79,17 +91,27 @@ CUDA_VISIBLE_DEVICES=3 python src/lerobot/scripts/train.py \
 ```
 
 - Parameter explanations:
+
 policy.path – If you’re using pretrained model weights, specify the Hugging Face repository containing those weights.
+
 policy.repo_id – If you want to automatically upload your trained model to Hugging Face during training, specify your own repository here.
+
 task – I didn’t realize at first, but this is where you input the text prompt that serves as a language command for the model.
+
 wandb.enable – Set this to true to visualize your training logs as graphs on the WandB dashboard.
 
 - config setting:
+
 num_episode: 50
+
 batch_size: 8
+
 save_steps: 5000 / 10000
+
 "freeze_vision_encoder": true,
+
 "train_expert_only": **false**,
+
 "train_state_proj": true
 
 
@@ -113,6 +135,7 @@ There is no need to manually create the repository in advance — it will be cre
 
 
 ### Inference
+
 ```bash
 lerobot-record  \
 --robot.type=so100_follower \
@@ -129,4 +152,16 @@ lerobot-record  \
 - -policy.path=${HF_USER}/my_policy
 ```
 
-Feel free to reach out if you run into any problems or have suggestions for improving this setup!
+
+### Some comments
+
+Unlike ACT or Diffusion Policy, which are trained from scratch, I fine-tuned Pi0 and ran inference with it.
+Even though the training data were collected only in bright indoor environments with the lights on, the robot still managed to perform tasks pretty accurately even in darker settings.
+
+From what I’ve seen in GitHub issues and tutorials, Pi0 tends to work best when it’s heavily overfitted to a small number of tasks — kind of the opposite of what you’d expect from a general foundation model.
+It seems that even large-scale robot foundation models struggle with the huge diversity in robot hardware, task types, and data collection environments.
+
+I’m really curious to see how GROOT handles this.
+
+
+<p>Feel free to reach out if you run into any problems or have suggestions for improving this setup!</p>
