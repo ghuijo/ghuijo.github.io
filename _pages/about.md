@@ -14,27 +14,27 @@ profile:
   more_info: 
 # <p>geonhui_jo@ewha.ac.kr</p>
 
-selected_papers: true # includes a list of papers marked as "selected={true}"
+selected_papers: false # includes a list of papers marked as "selected={true}"
 social: false # includes social icons at the bottom of the page
 
 announcements:
-  enabled: true # includes a list of news items
+  enabled: false # includes a list of news items
   scrollable: true # adds a vertical scroll bar if there are more than 3 news items
   limit: 5 # leave blank to include all the news in the `_news` folder
 
 latest_posts:
-  enabled: true
+  enabled: false
   scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
   limit: 3 # leave blank to include all the blog posts
 ---
 
 Hello!I'm a researcher designing geometry-aware deep neural networks for computer vision and image generation.
 
-I am currently affiliated with the Industry-Academic Cooperation Foundation, Ewha Womans University, in Seoul, Korea.
+I am currently affiliated with the Industry-Academic Cooperation Foundation, Ewha Womans University, in Seoul, South Korea.
 
-Before joining ICF-Ewha, I completed my M.S. in Artificial Intelligence Convergence (Medical AI & CV Lab, advised by Prof. Jang-Hwan Choi) and my B.S. in Computer Science and Engineering at Ewha Womans University in 2024 and 2022, respectively.
+Before joining ICF-Ewha, I completed my M.S. in Artificial Intelligence Convergence (Medical AI & CV Lab, advised by *Prof. Jang-Hwan Choi*) and my B.S. in Computer Science and Engineering at Ewha Womans University in 2024 and 2022, respectively.
 
-My research interests include computer vision, generative modeling, and efficient inference, with applications spanning 3D perception, human-centered AI and robotics.
+My research interests include **computer vision, generative modeling, and efficient inference**, with applications spanning **3D perception, human-centered AI and robotics**.
 
 I also have experience in human pose recognition, medical image analysis, and protein-protein interaction prediction.
 
