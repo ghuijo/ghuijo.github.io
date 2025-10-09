@@ -2,7 +2,7 @@
 layout: cv
 # permalink: /cv/
 permalink: /assets/pdf/CV_Geonhui_JO_Oct_2025.pdf
-title: cv
+title: CV
 nav: true
 nav_order: 5
 cv_pdf: /assets/pdf/CV_Geonhui_JO_Oct_2025.pdf
