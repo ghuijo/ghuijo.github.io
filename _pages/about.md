@@ -2,7 +2,9 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: >
+  <a href='https://www.linkedin.com/in/geonhui-jo/'>LinkedIn</a>.
+  <a href='https://github.com/ghuijo'>Github</a>.
 
 profile:
   align: left
