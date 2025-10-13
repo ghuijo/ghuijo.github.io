@@ -38,7 +38,7 @@ My research interests include **computer vision, generative modeling, and effici
 
 I also have experience in human pose recognition, medical image analysis, and protein-protein interaction prediction.
 
-For more details, please refer to my [CV](../assets/pdf/CV_Geonhui_JO_Oct_2025.pdf).
+<!-- For more details, please refer to my [CV](../assets/pdf/CV_Geonhui_JO_Oct_2025.pdf). -->
 
 <!-- Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
 
